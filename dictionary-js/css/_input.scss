@@ -17,18 +17,6 @@ $color-white: #fff;
 
   margin-bottom: 20px;
 
-  &::before {
-    content: '';
-    position: absolute;
-
-    width: 100%;
-    height: 10px;
-
-    border-radius: 70px;
-    border-top: 2px solid $color-neutra;
-    margin-top: 50px;
-  }
-
   .input-text {
     outline: none;
     border: 1px solid $color-neutra;

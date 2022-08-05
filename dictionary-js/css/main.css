@@ -53,15 +53,6 @@ body {
   position: relative;
   margin-bottom: 20px;
 }
-.container-input::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  border-radius: 70px;
-  border-top: 2px solid #cacaca;
-  margin-top: 50px;
-}
 .container-input .input-text {
   outline: none;
   border: 1px solid #cacaca;
@@ -116,6 +107,7 @@ body {
   }
 }
 .title-result {
+  position: relative;
   margin-bottom: 25px;
 }
 .title-result h4 {
@@ -128,6 +120,14 @@ body {
   color: #494949;
   font-style: italic;
   font-weight: 400;
+}
+.title-result::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid #cacaca;
+  margin-top: 70px;
 }
 
 .description {
@@ -160,8 +160,7 @@ body {
   font-weight: 500;
   font-style: oblique;
   margin-bottom: 15px;
-  padding-left: 20px;
-  border-left: 3px solid #494949;
+  padding-left: 10px;
 }
 
 @media (max-width: 568px) {
