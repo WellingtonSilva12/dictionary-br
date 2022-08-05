@@ -22,12 +22,17 @@ function searchWord() {
             <h4>${word}</h4>
             <span>${data[0].partOfSpeech}</span>
           </div>
+          <div class = 'etymology'>
           <h6> ${data[0].etymology}</h6>
+          </div>
+          <div class="meanings">
+          <h5>Significado</h5>
           <p class="description">
             <span>1. </span>
             ${data[0].meanings[0]}
           </p>
-          <p class="description"><span>2. </span>${data[0].meanings[1]}</p> `
+          <p class="description"><span>2. </span>${data[0].meanings[1]}</p>
+          </div>`
       })
       .catch(() => {
         result.innerHTML = `<p class="warning">

@@ -10,6 +10,12 @@ $color-neutra: #cacaca;
 $color-font: #494949;
 $color-white: #fff;
 
+@mixin props-font-result() {
+  color: $color-font;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .title-result {
   margin-bottom: 25px;
 
@@ -21,14 +27,13 @@ $color-white: #fff;
 
   span {
     font-size: $font-span;
-    color: $color-font;
-    font-style: italic;
-    font-weight: 400;
+    @include props-font-result();
   }
 }
 
 .description {
   margin-bottom: 15px;
+
   color: $color-font;
   font-size: $font-p;
 
@@ -39,12 +44,36 @@ $color-white: #fff;
 }
 
 .container-result {
+  .meanings {
+    border-left: 4px solid $color-primary;
+    padding-left: 15px;
+    padding-block: 5px;
+    border-radius: 10px;
+  }
+  .meanings::-webkit-scrollbar {
+    width: 0px;
+  }
+  h5 {
+    font-size: $font-h4;
+    @include props-font-result;
+  }
   h6 {
     font-size: $font-h6;
     font-weight: 500;
     font-style: oblique;
+
     margin-bottom: 15px;
-    border-left: 2px solid $color-font;
     padding-left: 20px;
+
+    border-left: 3px solid $color-font;
+  }
+}
+
+@media (max-width: 568px) {
+  .container-result {
+    .meanings {
+      max-height: 250px;
+      overflow-y: auto;
+    }
   }
 }
