@@ -1,0 +1,50 @@
+$font-p: 1.6rem;
+$font-span: 1.4rem;
+$font-h3: 2.8rem;
+$font-h4: 2.2rem;
+$font-h6: 1.7rem;
+
+$color-primary: #1a5bc2;
+$color-secondary: #2d6dd3;
+$color-neutra: #cacaca;
+$color-font: #494949;
+$color-white: #fff;
+
+.title-result {
+  margin-bottom: 25px;
+
+  h4 {
+    font-size: $font-h4;
+    color: $color-primary;
+    text-transform: capitalize;
+  }
+
+  span {
+    font-size: $font-span;
+    color: $color-font;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+.description {
+  margin-bottom: 15px;
+  color: $color-font;
+  font-size: $font-p;
+
+  span {
+    color: $color-primary;
+    font-weight: 600;
+  }
+}
+
+.container-result {
+  h6 {
+    font-size: $font-h6;
+    font-weight: 500;
+    font-style: oblique;
+    margin-bottom: 15px;
+    border-left: 2px solid $color-font;
+    padding-left: 20px;
+  }
+}
