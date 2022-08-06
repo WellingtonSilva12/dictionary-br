@@ -6,14 +6,14 @@ const result = document.querySelector('.container-result')
 
 btnText.addEventListener('click', searchWord)
 
-function searchWord() {
+async function searchWord() {
   let word = inputText.value
   if (word.length === 0) {
     result.innerHTML = `<p class="error">
       <i class='bx bxs-error-alt'></i> Campo obrigatório! - Digite uma palavra
     </p>`
   } else {
-    fetch(`${url}${word}`)
+    await fetch(`${url}${word}`)
       .then(res => res.json())
       .then(data => {
         console.log(data)
